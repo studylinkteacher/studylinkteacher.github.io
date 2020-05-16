@@ -1,0 +1,76 @@
+<html>
+	<head>
+	<script>
+		function result() {
+		document.querySelector(".vyvid").value=eval(document.querySelector(".vyvid").value);
+		
+		}
+		function clean(){
+		document.querySelector(".vyvid").value="";
+		}
+		function add(number){
+			document.querySelector(".vyvid").value=document.querySelector(".vyvid").value+number;
+		}
+	</script>
+	<style>
+	body{
+background:linear-gradient(to right,purple,red);
+
+}
+	
+	input[type="button"]{border:none;
+	padding:4px;font-size:30px;
+	font-family:Consolas;
+	background:navy;
+	color:white;
+	width:40px;
+	outline:none;
+	height:40px;}
+	#wb{width:84px;}
+	#hb{height:84px;}
+	input[type="text"]{
+	width:174px;
+	height:32px;
+	font-family:Consolas;
+	font-size:20px;
+	padding:4px;
+	
+	border:1px solid purple;
+	}
+	</style>
+	</head>
+	<body>
+	<table align="center">
+	<tr> <th colspan="4"><input type="text" class="vyvid"></th></tr>
+	<tr>
+	<th colspan="2"><input type="button" value="C" onclick="clean()" id="wb"></th>
+	<th><input type="button" value="/" onclick="add('/')"></th>
+	<th><input type="button" value="*" onclick="add('*')"></th>
+	</tr>
+	<tr>
+	<th><input type="button" value="7" onclick="add(7)"></th>
+	<th><input type="button" value="8" onclick="add(8)"></th>
+	<th><input type="button" value="9" onclick="add(9)"></th>
+	<th><input type="button" value="-" onclick="add('-')"></th>
+	</tr>
+	<tr>
+	<th><input type="button" value="4" onclick="add(4)"></th>
+	<th><input type="button" value="5" onclick="add(5)"></th>
+	<th><input type="button" value="6" onclick="add(6)"></th>
+	<th><input type="button" value="+" onclick="add('+')"></th>
+	</tr>
+	<tr>
+	<th><input type="button" value="1" onclick="add(1)"></th>
+	<th><input type="button" value="2" onclick="add(2)"></th>
+	<th><input type="button" value="3" onclick="add(3)"></th>
+	<th rowspan="2"><input type="button" value="=" onclick="result()" id="hb"> </th>
+	</tr>
+	<tr>
+	<th colspan="2">	<input type="button" value="0" onclick="add('0')" id="wb"></th>
+	<th><input type="button" value="." onclick="add('.')"></th>
+	</tr>
+	</table>
+	<form>
+	</form>
+	</body>
+</html>
